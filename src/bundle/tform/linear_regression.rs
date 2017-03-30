@@ -48,7 +48,7 @@ impl DefaultNode for LinearRegression {
   fn model(&self) -> &Any { &self.model as &Any }
 
   fn create_shape(&self) -> dsl::Shape {
-    dsl::Shape::new(vec![dsl::Socket::new(self.features_col.clone(), String::from("feautres"))],
+    dsl::Shape::new(vec![dsl::Socket::new(self.features_col.clone(), String::from("features"))],
     vec![dsl::Socket::new(self.prediction_col.clone(), String::from("prediction"))])
   }
 }
